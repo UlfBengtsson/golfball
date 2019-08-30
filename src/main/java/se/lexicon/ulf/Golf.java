@@ -2,6 +2,8 @@ package se.lexicon.ulf;
 
 public class Golf {
 
+    private static final double GRAVITY = 9.8;
+
     /**
      * Converts angle in degrees to angle in radians
      * (Pi / 180) * angle = angle in radians
@@ -10,7 +12,8 @@ public class Golf {
      */
     public static double angleToRadius(double angle)
     {
-        return 0.0;
+        double result = (Math.PI / 180) * angle;
+        return result;
     }
 
     /**
@@ -21,6 +24,7 @@ public class Golf {
      */
     public static double ballDistanceTraveled(double velocity, double angle)
     {
-        return 0.0;
+        double result = Math.sin( 2 * angleToRadius(angle)) * Math.pow(velocity, 2) / GRAVITY;
+        return result;
     }
 }

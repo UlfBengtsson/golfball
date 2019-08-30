@@ -42,4 +42,32 @@ public class AppTest
         //Assert
         assertEquals(320.0, result, 4);
     }
+
+    @Test
+    public void ballDistanceTraveled_test_0_meters()
+    {
+        //Arrange
+        double angle = 45;
+        double velocity = 0;
+
+        //Act
+        double result = Golf.ballDistanceTraveled( velocity, angle );
+
+        //Assert
+        assertEquals(0.0, result, 4);
+    }
+
+    @Test
+    public void ballDistanceTraveled_test_0_meters_90_degrees()
+    {
+        //Arrange
+        double angle = 90;
+        double velocity = 56;
+
+        //Act
+        double result = Golf.ballDistanceTraveled( velocity, angle );
+
+        //Assert
+        assertEquals(0.0, result, 4);
+    }
 }
